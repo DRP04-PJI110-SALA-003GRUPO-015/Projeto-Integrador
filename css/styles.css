@@ -11,7 +11,21 @@ h1 ,h2 , h3 {
 }
 
 p {
-    color:#70747a;
+    color:#d61fee;
+}
+
+/* carrosel*/
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Altere o valor conforme necessário */
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*Navbar */
@@ -70,7 +84,7 @@ nav {
 
 /*main banner */
 .main-banner {
-    background-image: url("/img/fundo\ .png");
+   /* background-image: url("/img/fundo03.png");*/
     background-size: cover;
     background-position: center;
     height: 100vh;
