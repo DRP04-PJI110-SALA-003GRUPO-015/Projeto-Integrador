@@ -1,112 +1,99 @@
-/*geral*/
+/* GERAL */
 * {
-    margin:0;
-    padding:0;
-    font-family: helvetica;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
+
 }
 
-h1 ,h2 , h3 {
-    color: #333;
+body {
+    flex-wrap: wrap;
+}
+/*
+#cabecalho {
+       padding: 1.4rem 2rem;
 }
 
-p {
-    color:#d61fee;
+#logo img {
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    width: 120px;
+    gap: 1.4rem;
 }
 
-/* carrosel*/
-
-.carousel-container {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Altere o valor conforme necessário */
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-position: center;
+#logo {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-/*Navbar */
-.navbar-container {
-    width: 100%;
-    height: 80px;
-    background-color: #232a31;
-    padding: 0 2rem;
+#logo1 {
+    padding-left: 0.4rem;
 }
 
-nav {
-    position: relative;
-}
-
-.logo {
-    width: 50px;
-    margin-top: 15px;
-}
-
-.navbar-items {
-    position: absolute;
-    right: 0;
-    height: 80px;
-    line-height: 80px;
-    margin: 0;
-    display: inline-block;
+#main {
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: row;
 
 }
+*/
 
-.navbar-items li {
-    display: inline-block;
-    text-transform: uppercase;
-    margin-left: 25px;
+#cabecalho {
+    display: flex;  /* Ativa o flexbox */
+    justify-content: space-between;  /* Distribui o conteúdo entre as extremidades */
+    align-items: center;  /* Alinha verticalmente o logo e o menu */
+    padding: 1.4rem 2rem;
 }
 
-.navbar-items a {
-    color: #fff;
-    text-decoration: none;
-    transition: 0.5s;
+#logo {
+    display: flex;
+    align-items: center;
 }
 
-.navbar-items a:hover {
-    color: #ccc;
-    }
-.default-btn {
-    padding: 5px 10px;
-    background-color: #2cc76a;
-    border-radius: 5px;
-}    
-
-.default-btn:hover {
-    background-color: rgb(0, 255, 255);
-    color: #866d4d;
+#logo img {
+    border-radius: 50%;
+    width: 120px;
 }
 
+#logo1 {
+    padding-left: 0.4rem;
+}
 
-/*main banner */
-.main-banner {
-   /* background-image: url("/img/fundo03.png");*/
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-    padding: 0rem 0;
+#main {
+    font-size: 1.8rem;
+    display: flex;
+    gap: 2rem;  /* Espaço entre os itens do menu */
     
 }
 
-.main-banner h1,
-.main-banner p {
-    color: #8a2297;
-    text-align: center;
-    font-weight:bold ;
-   /* text-shadow: #000 3px 2px 3px;*/
+#main ul {
+    display: flex;  /* Faz a lista horizontal */
+    list-style: none;  /* Remove os marcadores da lista */
+    text-decoration: none;
 }
 
-.main-banner h1 {
-    font-size: 54px;
+#main li {
+    position: relative;  /* Necessário para o tooltip */
 }
 
-.main-banner p {
-    font-size: 35px;
+.tooltip {
+    display: none;  /* Esconde o tooltip inicialmente */
+    position: absolute;
+    top: 100%;  /* Posiciona o tooltip logo abaixo do item */
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 200px;
+    margin-top: 5px;
+    z-index: 1;
+}
+
+li:hover .tooltip {
+    display: block;  /* Mostra o tooltip ao passar o mouse */
 }
 
 
@@ -121,9 +108,42 @@ nav {
 
 
 
-/* Varios tamanhos*/
 
-@media screen and (max-width: 500px ){  
-    h1 { color: rgb(40, 185, 130);
-    }  
+
+
+
+ul {
+    display: flex;
+    flex-direction: line;
 }
+ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    position: relative; /* Importante para posicionar o tooltip */
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .tooltip {
+    display: none; /* Esconde o tooltip por padrão */
+    position: absolute;
+    top: 100%; /* Posição logo abaixo do item */
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 200px;
+    margin-top: 5px;
+    z-index: 1;
+  }
+  
+  li:hover .tooltip {
+    display: block; /* Mostra o tooltip quando o mouse passa sobre o item */
+  }
+  
