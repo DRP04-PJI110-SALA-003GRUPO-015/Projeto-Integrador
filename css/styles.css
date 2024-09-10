@@ -9,41 +9,13 @@
 body {
     flex-wrap: wrap;
 }
-/*
-#cabecalho {
-       padding: 1.4rem 2rem;
-}
-
-#logo img {
-    align-items: center;
-    display: flex;
-    border-radius: 50%;
-    width: 120px;
-    gap: 1.4rem;
-}
-
-#logo {
-    display: flex;
-    align-items: center;
-}
-
-#logo1 {
-    padding-left: 0.4rem;
-}
-
-#main {
-    font-size: 1.8rem;
-    display: flex;
-    flex-direction: row;
-
-}
-*/
 
 #cabecalho {
     display: flex;  /* Ativa o flexbox */
     justify-content: space-between;  /* Distribui o conteúdo entre as extremidades */
     align-items: center;  /* Alinha verticalmente o logo e o menu */
     padding: 1.4rem 2rem;
+    background-color: rgb(69, 168, 214);
 }
 
 #logo {
@@ -96,7 +68,10 @@ li:hover .tooltip {
     display: block;  /* Mostra o tooltip ao passar o mouse */
 }
 
+#conheca-nos {
+    text-decoration: none;
 
+}
 
 
 
