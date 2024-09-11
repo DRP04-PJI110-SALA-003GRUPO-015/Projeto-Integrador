@@ -16,6 +16,7 @@ body {
     align-items: center;  /* Alinha verticalmente o logo e o menu */
     padding: 1.4rem 2rem;
     background-color: rgb(69, 168, 214);
+    text-decoration: none;
 }
 
 #logo {
@@ -42,11 +43,12 @@ body {
 #main ul {
     display: flex;  /* Faz a lista horizontal */
     list-style: none;  /* Remove os marcadores da lista */
-    text-decoration: none;
+    
 }
 
 #main li {
     position: relative;  /* Necessário para o tooltip */
+    
 }
 
 .tooltip {
@@ -62,17 +64,17 @@ body {
     width: 200px;
     margin-top: 5px;
     z-index: 1;
+    
 }
 
 li:hover .tooltip {
     display: block;  /* Mostra o tooltip ao passar o mouse */
 }
 
-#conheca-nos {
-    text-decoration: none;
+#decoration {
+   text-decoration: none;
 
 }
-
 
 
 
