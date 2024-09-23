@@ -11,6 +11,9 @@ body {
     margin: 5px;
 }
 
+
+
+
 #cabecalho {
     display: flex;  /* Ativa o flexbox */
     justify-content: space-between;  /* Distribui o conteúdo entre as extremidades */
@@ -125,6 +128,12 @@ ul {
      height: 400px;
      color: #fff;
      font-family: Helvetica;
+     display: grid;
+     grid-template-columns: repeat (2,1fr);
+     grid-gap: 10px;
+     margin: auto;
+     max-width: auto;
+     
      
 }
 
@@ -177,4 +186,25 @@ ul {
 
 .servicos a:hover {
     background-color: #069;
+} 
+
+.fotos_nav img {
+    width: 300px; /* Define a largura fixa para as imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Garante que a imagem se encaixe no espaço definido */
+    border-radius: 5px; /* Adiciona bordas arredondadas, se desejar */
+    
+    
+    
 }
+
+.fotos_nav {
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    flex-wrap: wrap;
+    position: absolute;
+    top: 250px;
+    right: 60px;
+    gap: 30px;
+}
+
