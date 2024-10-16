@@ -1,129 +1,298 @@
-/*geral*/
+/* GERAL */
 * {
-    margin:0;
-    padding:0;
-    font-family: helvetica;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
+
 }
 
-h1 ,h2 , h3 {
-    color: #333;
+body {
+    flex-wrap: wrap;
+    margin: 5px;
 }
 
-p {
-    color:#d61fee;
+#cabecalho {
+    display: flex;  /* Ativa o flexbox */
+    justify-content: space-between;  /* Distribui o conteúdo entre as extremidades */
+    align-items: center;  /* Alinha verticalmente o logo e o menu */
+    padding: 1.4rem 2rem;
+    background-color: rgb(69, 168, 214);
+    text-decoration: none;
+    border-bottom:6px solid #09333a;
 }
 
-/* carrosel*/
-
-.carousel-container {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Altere o valor conforme necessário */
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-position: center;
+#logo {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-/*Navbar */
-.navbar-container {
-    width: 100%;
-    height: 80px;
-    background-color: #232a31;
-    padding: 0 2rem;
+#logo img {
+    border-radius: 50%;
+    width: 120px;
 }
 
-nav {
-    position: relative;
+#logo1 {
+    padding-left: 0.4rem;
 }
 
-.logo {
-    width: 50px;
-    margin-top: 15px;
-}
-
-.navbar-items {
-    position: absolute;
-    right: 0;
-    height: 80px;
-    line-height: 80px;
-    margin: 0;
-    display: inline-block;
-
-}
-
-.navbar-items li {
-    display: inline-block;
-    text-transform: uppercase;
-    margin-left: 25px;
-}
-
-.navbar-items a {
-    color: #fff;
-    text-decoration: none;
-    transition: 0.5s;
-}
-
-.navbar-items a:hover {
-    color: #ccc;
-    }
-.default-btn {
-    padding: 5px 10px;
-    background-color: #2cc76a;
-    border-radius: 5px;
-}    
-
-.default-btn:hover {
-    background-color: rgb(0, 255, 255);
-    color: #866d4d;
-}
-
-
-/*main banner */
-.main-banner {
-   /* background-image: url("/img/fundo03.png");*/
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-    padding: 0rem 0;
+#main {
+    font-size: 1.8rem;
+    display: flex;
+    gap: 2rem;  /* Espaço entre os itens do menu */
     
 }
 
-.main-banner h1,
-.main-banner p {
-    color: #8a2297;
+#main ul {
+    display: flex;  /* Faz a lista horizontal */
+    list-style: none;  /* Remove os marcadores da lista */
+    text-decoration: none;
+    
+}
+
+#main li {
+    position: relative;  /* Necessário para o tooltip */
+    
+}
+
+.tooltip {
+    display: none;  /* Esconde o tooltip inicialmente */
+    position: absolute;
+    top: 100%;  /* Posiciona o tooltip logo abaixo do item */
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 200px;
+    margin-top: 5px;
+    z-index: 1;
+    
+}
+
+
+li:hover .tooltip {
+    display: block;  /* Mostra o tooltip ao passar o mouse */
+}
+
+
+.tooltip_login {
+    display: none;  /* Esconde o tooltip inicialmente */
+    position: absolute;
+    top: 100%;  /* Posiciona o tooltip logo abaixo do item */
+    right: 5px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 200px;
+    margin-top: 5px;
+    z-index: 1;
+    
+}
+
+
+li:hover .tooltip_login {
+    display: block;  /* Mostra o tooltip ao passar o mouse */
+}
+
+
+#decoration {
+   text-decoration: none;
+
+}
+
+ul {
+    display: flex;
+    flex-direction: line;
+}
+ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    position: relative; /* Importante para posicionar o tooltip */
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .tooltip {
+    display: none; /* Esconde o tooltip por padrão */
+    position: absolute;
+    top: 100%; /* Posição logo abaixo do item */
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 200px;
+    margin-top: 5px;
+    z-index: 1;
+  }
+  
+  li:hover .tooltip {
+    display: block; /* Mostra o tooltip quando o mouse passa sobre o item */
+  }
+  
+
+  /* folder */
+
+.folder {
+    background-color:#37c0d8 ;
+    height: 400px;
+    color: #fff;
+    font-family: Helvetica;
+    display: flex;
+    grid-gap: 10px;
+    margin: auto;
+    max-width: auto;
+    border: 2px rgb(136, 57, 57) solid;
+     
+     
+}
+
+.textos {
+    padding-left:30px;
+    width: 350px;
+}
+
+.folder_p {
+    padding-top: 20px;
+    margin-bottom: 15px;
+    
+}
+
+
+
+.folder_h1 {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    line-height: 35px;
+    
+}
+
+.folder_texto {
+    padding-top: 10px;
+    justify-content: space-around;
+}
+
+/* SERVICOS */
+.servicos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 400px;
+}
+
+.servicos a {
+    display: block;
     text-align: center;
-    font-weight:bold ;
-   /* text-shadow: #000 3px 2px 3px;*/
+    padding: 10px;
+    background-color: #09333a;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: .9rem;
+    width: 100px;
+    margin-top: 30px;
+
 }
 
-.main-banner h1 {
-    font-size: 54px;
+.servicos a:hover {
+    background-color: #069;
+} 
+
+.fotos_nav img {
+    width: 300px; /* Define a largura fixa para as imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Garante que a imagem se encaixe no espaço definido */
+    border-radius: 5px; /* Adiciona bordas arredondadas, se desejar */
+    
+    
+    
 }
 
-.main-banner p {
-    font-size: 35px;
+.fotos_nav {
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    flex-wrap: wrap;
+    position: absolute;
+    top: 250px;
+    right: 60px;
+    gap: 30px;
 }
 
 
+/*----------------index1----------------------*/
 
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+} */
 
-
-
-
-
-
-
-
-
-
-/* Varios tamanhos*/
-
-@media screen and (max-width: 500px ){  
-    h1 { color: rgb(40, 185, 130);
-    }  
+.clinica {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
 }
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+section {
+    padding: 3em;
+    background-color: white;
+    margin: 1em auto;
+    max-width: 800px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #003366;
+    margin-bottom: 0.5em;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 1.5em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    color: white;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+}
+
+#contact p {
+    font-size: 1.1em;
+}
+
