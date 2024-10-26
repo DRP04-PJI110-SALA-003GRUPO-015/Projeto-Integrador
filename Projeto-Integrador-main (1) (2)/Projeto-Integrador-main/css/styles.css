@@ -1,0 +1,305 @@
+/* GERAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(69, 168, 214);
+}
+
+body {
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+#cabecalho {
+    display: flex;  /* Ativa o flexbox */
+    justify-content: space-between;  /* Distribui o conteúdo entre as extremidades */
+    align-items: center;  /* Alinha verticalmente o logo e o menu */
+    padding: 1.4rem 2rem;
+    text-decoration: none;
+    border-bottom:2px solid #09333a;
+    width: 100%;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+#logo img {
+    border-radius: 50%;
+    width: 20%;
+}
+
+#logo1 {
+    margin-left: 0.4rem;
+}
+
+
+#decoration{
+    color: #fff;
+    font-size: 18px;
+}
+
+.tooltip {
+    display: none;  /* Esconde o tooltip inicialmente */
+    position: absolute;
+    top: 100%;  /* Posiciona o tooltip logo abaixo do item */
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 200px;
+    margin-top: 5px;
+    z-index: 1;
+    
+}
+
+
+li:hover .tooltip {
+    display: block;  /* Mostra o tooltip ao passar o mouse */
+}
+
+
+.tooltip_login {
+    display: none;  /* Esconde o tooltip inicialmente */
+    position: absolute;
+    top: 100%;  /* Posiciona o tooltip logo abaixo do item */
+    right: 5px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 200px;
+    margin-top: 5px;
+    z-index: 1;
+    
+}
+
+
+li:hover .tooltip_login {
+    display: block;  /* Mostra o tooltip ao passar o mouse */
+}
+
+
+#decoration {
+   text-decoration: none;
+
+}
+  
+  li {
+    position: relative; /* Importante para posicionar o tooltip */
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .tooltip {
+    display: none; /* Esconde o tooltip por padrão */
+    position: absolute;
+    top: 100%; /* Posição logo abaixo do item */
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 200px;
+    margin-top: 5px;
+    z-index: 1;
+  }
+  
+  li:hover .tooltip {
+    display: block; /* Mostra o tooltip quando o mouse passa sobre o item */
+  }
+  
+
+  /* folder */
+
+.folder {
+
+    height: 100%;
+    color: #fff;
+    font-family: Helvetica;
+    display: flex;
+    grid-gap: 10px;
+    margin: auto;
+    max-width: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.4rem;
+     
+     
+}
+
+.textos {
+    width: 100%;
+    height: 50%;
+}
+
+.folder_p {
+    padding-top: 20px;
+    margin-bottom: 15px;
+    
+}
+
+
+
+.folder_h1 {
+    display: flex;
+    width: 100%;
+    line-height: 35px;
+    
+}
+
+.folder_texto {
+    padding-top: 10px;
+}
+
+/* SERVICOS */
+.servicos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    
+}
+
+.servicos a {
+    display: block;
+    text-align: center;
+    padding: 30px;
+    background-color:rgb(37, 37, 37);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: .9rem;
+    width: 30%;
+}
+
+.servicos a:hover {
+    background-color: lightcyan;
+    color: grey;
+} 
+
+.fotos_nav img{
+    width: 300px; /* Define a largura fixa para as imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Garante que a imagem se encaixe no espaço definido */
+    border-radius: 5px; /* Adiciona bordas arredondadas, se desejar */
+    
+    
+    
+}
+
+.fotos_nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    width: 50%;
+   
+   
+}
+
+.clinica {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+section {
+    padding: 3em;
+    background-color: white;
+    margin: 1em auto;
+    max-width: 800px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #003366;
+    margin-bottom: 0.5em;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 1.5em;
+}
+
+#main{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 50%;
+    
+}
+
+#contact p {
+    font-size: 1.1em;
+}
+
+body .folder .fotos_nav .um{
+    max-height: 100%;
+    max-width: 100%;
+    padding-bottom: 50px;
+    
+}
+
+.conteudo{
+    width: 50%;
+}
+
+#decoration:hover {
+    color:rgb(37, 37, 37);
+} 
+
+#decoration{
+    padding-left: 3vh;
+}
+
+@media (max-width: 1024px) {
+    #main{display: none;}
+    #cabecalho{width: 100%;}
+  }
+
+
+  form{
+    padding: 40px;
+  }
+
+  #Form{
+    padding: 40px 40px 20px 40px;
+    color: #fff;
+  }
+
+  .form-check{
+    padding-top: 40px;
+  }
